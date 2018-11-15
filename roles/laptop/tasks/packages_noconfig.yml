@@ -4,9 +4,13 @@
     - rhythmbox
 
 - name: Install packages that do not need configuration file changes
-  package: name={{ item }} state=present
+  package: name={{ item }} state=latest
   with_items:
     - google-chrome-stable
     - gnome-music
+    - gnome-tweaks
+    - python3-psutil
     - sl
+    - tilix
     - youtube-dl
+#    - https://atom-installer.github.com/v1.32.2/atom.x86_64.rpm

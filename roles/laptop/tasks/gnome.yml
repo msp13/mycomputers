@@ -1,0 +1,27 @@
+- name: Install Gnome Themes
+  package: name={{ item }} state=latest
+  with_items:
+    - adwaita-gtk2-theme
+    - adwaita-icon-theme
+    - adwaita-cursor-theme
+
+- name: Set Gnome GTK theme
+  become_user: mpedder
+  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Adwaita-dark'"
+
+- name: Set Gnome Clock to show date
+  become_user: mpedder
+  dconf: key="/org/gnome/desktop/interface/clock-show-date" value="true"
+
+- name: Set Gnome Clock to show seconds
+  become_user: mpedder
+  dconf: key="/org/gnome/desktop/interface/clock-show-seconds" value="true"
+
+# I failed at this.  I will revisit.
+#- name: Set Gnome Terminal Transparency
+#  become_user: mpedder
+#  dconf: key="/org/gnome/terminal/legacy/profiles:'\':b1dcc9dd-5262-4d8d-a863-c897e6d979b9" value="'24'"
+
+- name: Set Gnome Tilix theme
+  become_user: mpedder
+  dconf: key="/com/gexperts/Tilix/theme-variant" value="'dark'"

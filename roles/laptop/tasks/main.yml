@@ -3,5 +3,11 @@
 - name: add bashrc
   import_tasks: bashrc.yml
 
+- name: Create repor file and install MS VSCode
+  import_tasks: ms_vscode.yml
+
 - name: Install ackages that do not need configuration changes.
   import_tasks: packages_noconfig.yml
+
+- name: Tweak Gnome settings for specific user.
+  import_tasks: gnome.yml

@@ -1,0 +1,20 @@
+- name: Import key via rpm for MS VSCode
+  rpm_key:
+    state: present
+    key: https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Add repository for MS VSCode
+  blockinfile:
+    path: /etc/yum.repos.d/vscode.repo
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    create: yes
+    block: |
+      [code]
+      name=Visual Studio Code
+      baseurl=https://packages.microsoft.com/yumrepos/vscode
+      enabled=1
+      gpgcheck=1
+      gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Install MS VSCode
+  package: name=code state=latest
