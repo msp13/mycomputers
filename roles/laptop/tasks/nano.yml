@@ -1,3 +1,0 @@
-- name: Install nano
-  dnf: name=nano
-
