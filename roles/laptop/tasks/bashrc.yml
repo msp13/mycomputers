@@ -1,0 +1,12 @@
+- name: Add customizations to .bashrc file
+  blockinfile:
+    path: /home/mpedder/.bashrc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    block: |
+      shopt -s histappend
+      export HISTSIZE=
+      export HISTFILESIZE=
+      PROMPT_COMMAND='history -a'
+      export HISTCONTROL=ignorespace:erasedups
+      export HISTIGNORE="ls:ps:history"
+    backup: yes

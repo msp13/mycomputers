@@ -1,0 +1,12 @@
+- name: Remove default install packages that I do not use
+  package: name={{ item }} state=absent
+  with_items:
+    - rhythmbox
+
+- name: Install packages that do not need configuration file changes
+  package: name={{ item }} state=present
+  with_items:
+    - google-chrome-stable
+    - gnome-music
+    - sl
+    - youtube-dl

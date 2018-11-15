@@ -1,2 +1,7 @@
 ---
 # tasks file for laptop
+- name: add bashrc
+  import_tasks: bashrc.yml
+
+- name: Install ackages that do not need configuration changes.
+  import_tasks: packages_noconfig.yml
