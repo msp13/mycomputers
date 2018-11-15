@@ -1,0 +1,9 @@
+- name: Install nano
+  package: name=nano
+
+- name: Uncomment line from /etc/nanorc to include all syntax highlighting.
+  replace:
+    path: /etc/nanorc
+    regexp: '^#\s*include "/usr/share/nano/\*.nanorc".*$'
+    replace: 'include "/usr/share/nano/*.nanorc"'
+    backup: yes

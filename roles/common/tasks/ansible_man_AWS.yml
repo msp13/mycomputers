@@ -1,0 +1,4 @@
+- name: Install ansible packages for AWS management
+  package:
+    name: ['python3-boto3.noarch', 'python3-boto.noarch', 'python3-ansible-lint']
+    state: present
