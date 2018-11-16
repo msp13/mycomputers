@@ -7,3 +7,12 @@
     regexp: '^#\s*include "/usr/share/nano/\*.nanorc".*$'
     replace: 'include "/usr/share/nano/*.nanorc"'
     backup: yes
+
+- name: Add customizations to .nanorc file
+  blockinfile:
+    path: /home/mpedder/.bashrc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    block: |
+      set tabsize 2 
+      set tabstospaces
+    backup: yes
