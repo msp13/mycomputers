@@ -4,8 +4,8 @@
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
 
-- name: Install the spotify flatpak
-  flatpak:
-    name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
-    state: present
+#- name: Install the spotify flatpak
+#  flatpak:
+#    name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
+#    state: present
 
