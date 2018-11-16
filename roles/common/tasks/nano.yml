@@ -10,7 +10,8 @@
 
 - name: Add customizations to .nanorc file
   blockinfile:
-    path: /home/mpedder/.bashrc
+    path: /home/mpedder/.nanorc
+    create: yes
     marker: "# {mark} ANSIBLE MANAGED BLOCK"
     block: |
       set tabsize 2 
