@@ -9,8 +9,11 @@
 - name: Add flathub remote 
   import_tasks: flathub.yml
 
-- name: Install ackages that do not need configuration changes.
+- name: Install packages that do not need configuration changes.
   import_tasks: packages_noconfig.yml
+
+- name: Install mp3fs package to mount FLAC files as mp3fs
+  import_tasks: mp3fs.yml
 
 - name: Tweak Gnome settings for specific user.
   import_tasks: gnome.yml

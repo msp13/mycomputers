@@ -1,0 +1,22 @@
+- name: Install mp3fs package to mount FLAC files as read-only mp3 file system
+  package: name={{ item }} state=latest
+  with_items:
+    - mp3fs
+
+# Create two mp3 mount points with differnet bit rates to
+# allow smaller files for products with smaller storage
+- name: mount mp3 192bit file system
+  mount:
+    path: /mnt/mp3/192bit
+    src: mp3fs#/home/mpedder/Music
+    fstype: fuse
+    opts: 'allow_other,ro,bitrate=192,quality=2,gainmode=1 0 0' 
+    state: mounted
+
+- name: mount mp3 320bit file system
+  mount:
+    path: /mnt/mp3/320bit
+    src: mp3fs#/home/mpedder/Music
+    fstype: fuse
+    opts: 'allow_other,ro,bitrate=320,quality=2,gainmode=1 0 0' 
+    state: mounted
