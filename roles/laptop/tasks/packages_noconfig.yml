@@ -13,6 +13,7 @@
     - gparted
     - gstreamer
     - gstreamer-plugins-base
+    - mediainfo
     - python-unversioned-command
     - python3-psutil
     - python3-mutagen
