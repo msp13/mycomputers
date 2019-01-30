@@ -8,10 +8,20 @@
     replace: 'include "/usr/share/nano/*.nanorc"'
     backup: yes
 
+- name: Create backup directory for nano
+  file:
+    path: /home/mpedder/nano-backups
+    state: directory
+    owner: mpedder
+    group: mpedder
+    mode: 0700
+
 - name: Add customizations to .nanorc file
   blockinfile:
     path: /home/mpedder/.nanorc
     create: yes
+    owner: mpedder
+    group: mpedder
     marker: "# {mark} ANSIBLE MANAGED BLOCK"
     block: |
       set autoindent
