@@ -1,0 +1,12 @@
+- name: Install Fedora Workstation Repositories for Google Chrome
+  package: name={{ item }} state=latest
+  with_items:
+    - fedora-workstation-repositories
+
+- name: Permanently enable Fedora Workstation Repositories
+  command: /usr/bin/dnf config-manager --set-enabled google-chrome
+
+- name: Install Stable Google Chrome
+  package: name={{ item }} state=latest
+  with_items:
+    - google-chrome-stable

@@ -6,9 +6,14 @@
 - name: Install packages that do not need configuration file changes
   package: name={{ item }} state=latest
   with_items:
-    - google-chrome-stable
+    - alacarte
+    - cockpit
     - gnome-music
     - gnome-tweaks
+    - gparted
+    - gstreamer
+    - gstreamer-plugins-base
+    - python-unversioned-command
     - python3-psutil
     - python3-mutagen
     - sl

@@ -12,6 +12,9 @@
 - name: Install packages that do not need configuration changes.
   import_tasks: packages_noconfig.yml
 
+- name: Install packages for Google Chrome and enable repo.
+  import_tasks: google-chrome.yml
+
 - name: Install mp3fs package to mount FLAC files as mp3fs
   import_tasks: mp3fs.yml
 
