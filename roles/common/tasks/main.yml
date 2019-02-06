@@ -3,5 +3,5 @@
 - name: add nano
   import_tasks: nano.yml
 
-- name: add packages needed to manage AWS via Ansible
-  import_tasks: ansible_man_AWS.yml
+- name: add bashrc
+  import_tasks: bashrc.yml

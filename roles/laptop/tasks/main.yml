@@ -1,9 +1,9 @@
 ---
 # tasks file for laptop
 
-- name: add bashrc
-  import_tasks: bashrc.yml
-
+- name: add packages needed to manage AWS via Ansible
+  import_tasks: ansible_man_AWS.yml
+  
 - name: Create repo file and install MS VSCode
   import_tasks: ms_vscode.yml
 
@@ -21,3 +21,6 @@
 
 - name: Tweak Gnome settings for specific user.
   import_tasks: gnome.yml
+
+- name: Update all installed packages to latest version.
+  import_tasks: update_packages.yml

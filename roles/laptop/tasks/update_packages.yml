@@ -1,0 +1,5 @@
+---
+# Update all installed packages
+
+- name: update all installed packages to latest version
+  package: name="*" state=latest
