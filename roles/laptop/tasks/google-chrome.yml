@@ -1,3 +1,6 @@
+---
+# Enable repo to allow installation of Google Chrome Browser
+
 - name: Install Fedora Workstation Repositories for Google Chrome
   package: name={{ item }} state=latest
   with_items:

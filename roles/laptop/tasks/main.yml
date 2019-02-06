@@ -1,5 +1,6 @@
 ---
 # tasks file for laptop
+
 - name: add bashrc
   import_tasks: bashrc.yml
 

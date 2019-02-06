@@ -1,3 +1,6 @@
+---
+# Adjust bash settings for my user preferences.
+
 - name: Add customizations to .bashrc file
   blockinfile:
     path: /home/mpedder/.bashrc

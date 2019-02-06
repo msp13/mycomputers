@@ -1,3 +1,7 @@
+---
+# Install fuse filesystem for mounting FLAC and OOG music files as mp3s.
+# This encodes the file on the fly to reduce disk space usage.
+
 - name: Install mp3fs package to mount FLAC files as read-only mp3 file system
   package: name={{ item }} state=latest
   with_items:

@@ -1,3 +1,6 @@
+---
+# Install and remove packages that do not need configuration changes.
+
 - name: Remove default install packages that I do not use
   package: name={{ item }} state=absent
   with_items:
@@ -13,11 +16,15 @@
     - gparted
     - gstreamer
     - gstreamer-plugins-base
+    - libguestfs-tools
     - mediainfo
     - python-unversioned-command
     - python3-psutil
     - python3-mutagen
+    - python-unversioned-command
     - sl
+    - speedtest-cli
     - tilix
+    - virt-install
+    - virt-manager
     - youtube-dl
-#    - https://atom-installer.github.com/v1.32.2/atom.x86_64.rpm

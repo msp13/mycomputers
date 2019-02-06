@@ -1,3 +1,6 @@
+---
+# Install MS Visual Code Editor
+
 - name: Import key via rpm for MS VSCode
   rpm_key:
     state: present
