@@ -1,5 +1,8 @@
 - name: Install nano
-  package: name=nano
+  package: 
+    name: 
+      - nano
+    state: latest
 
 - name: Uncomment line from /etc/nanorc to include all syntax highlighting.
   replace:
