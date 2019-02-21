@@ -20,6 +20,14 @@
   become_user: mpedder
   dconf: key="/org/gnome/desktop/interface/clock-show-seconds" value="true"
 
+- name: Set Gnome Clock to use automatic timezones
+  become_user: mpedder
+  dconf: key="/org/gnome/desktop/datetime/automatic-timezone" value="true"
+
+- name: Set Gnome Battery to show percentage
+  become_user: mpedder
+  dconf: key="/org/gnome/desktop/interface/show-battery-percentage" value="true"
+  
 - name: Set Gnome Tilix theme
   become_user: mpedder
   dconf: key="/com/gexperts/Tilix/theme-variant" value="'dark'"

@@ -2,30 +2,32 @@
 # Install and remove packages that do not need configuration changes.
 
 - name: Remove default install packages that I do not use
-  package: name={{ item }} state=absent
-  with_items:
-    - rhythmbox
+  package:
+    name:
+      - rhythmbox
+    state: absent
 
 - name: Install packages that do not need configuration file changes
-  package: name={{ item }} state=latest
-  with_items:
-    - alacarte
-    - cockpit
-    - gimp
-    - gnome-music
-    - gnome-tweaks
-    - gparted
-    - gstreamer
-    - gstreamer-plugins-base
-    - libguestfs-tools
-    - mediainfo
-    - python-unversioned-command
-    - python3-psutil
-    - python3-mutagen
-    - python-unversioned-command
-    - sl
-    - speedtest-cli
-    - tilix
-    - virt-install
-    - virt-manager
-    - youtube-dl
+  package:
+    name:
+      - alacarte
+      - cockpit
+      - gimp
+      - gnome-music
+      - gnome-tweaks
+      - gparted
+      - gstreamer
+      - gstreamer-plugins-base
+      - libguestfs-tools
+      - mediainfo
+      - python-unversioned-command
+      - python3-psutil
+      - python3-mutagen
+      - python-unversioned-command
+      - sl
+      - speedtest-cli
+      - tilix
+      - virt-install
+      - virt-manager
+      - youtube-dl
+    state: present

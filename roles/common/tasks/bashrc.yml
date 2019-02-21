@@ -12,4 +12,6 @@
       PROMPT_COMMAND='history -a'
       export HISTCONTROL=ignorespace:erasedups
       export HISTIGNORE="ls:ps:history"
+      export EDITOR=/usr/bin/nano
+      export VISUAL="$EDITOR"
     backup: yes
